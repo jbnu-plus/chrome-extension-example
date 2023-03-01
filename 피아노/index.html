@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Piano</title>
+    <style>
+      /* 피아노 건반 스타일 */
+        .piano {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 800px;
+        }
+
+  .key {
+    width: 40px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 0 2px;
+  }
+
+  .black-key {
+    width: 25px;
+    height: 80px;
+    background-color: black;
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+    z-index: 1;
+  }
+
+  .black-key.top {
+    top: -72px;
+  }
+</style>
+
+  </head>
+  <body>
+    <div class="piano">
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+        <div class="black-key top"></div>
+        <div class="key"></div>
+      </div>
+    <script>
+      // 키 이벤트 등록
+      document.addEventListener("keydown", function (event) {
+        var key = event.key;
+        var audio = document.querySelector("audio[data-key='" + key + "']");
+        var keyElement = document.querySelector(".piano-key[data-key='" + key + "']");
+        if (audio) {
+          audio.currentTime = 0;
+          audio.play();
+        }
+        if (keyElement) {
+          keyElement.classList.add("active");
+        }
+      });
+      document.addEventListener("keyup", function (event) {
+        var key = event.key;
+        var keyElement = document.querySelector(".piano-key[data-key='" + key + "']");
+        if (keyElement) {
+          keyElement.classList.remove("active");
+        }
+      });
+    </script>
+    <audio data-key="a" src="https://cdn.glitch.com/4b4d0625-d2d5-4ed5-8be5-698c0647b2d2%2FC4.mp3?v=1634115212379"></audio>
+    <audio data-key="s" src="https://cdn.glitch.com/4b4d0625-d2d
