@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+#result {
+    margin: 20px 0;
+}
+
+#imageResult {
+    max-width: 100%;
+}
