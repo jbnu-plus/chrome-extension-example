@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "민재 Extensions",
+  "description": "high Level Extension",
+  "version": "2.0",
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "hello_extensions.png"
+  }
+}
